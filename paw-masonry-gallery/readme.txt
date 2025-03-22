@@ -1,87 +1,58 @@
-=== Torque Masonry Gallery for Divi ===
+=== Divi Masonry Gallery - Pro Gallery ===
 
-Contributors: wppaw, badhonrocks
-Donate link: https://divitorque.com/
+Contributors: plugpressco, badhonrocks   
+Donate link: https://diviextensions.com/
 Tags: divi, builder, masonry, gallery, divi module
 Requires at least: 5.0
-Tested up to: 6.3
-Stable tag: 1.0.3
+Tested up to: 6.7.2
+Stable tag: 1.0.5
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Create a stunning masonry gallery display using multiple animation effects.
+Create beautiful masonry galleries in Divi with advanced customization options.
 
 == Description ==
 
-<strong>Torque Masonry Gallery Plugin for Divi and Extra Theme</strong>
+Divi Masonry Gallery is a premium Divi module that transforms how you display image galleries. Create stunning masonry layouts with advanced customization options and smooth animations.
 
-★★★★★
+Demo: [View Demo](https://diviextensions.com/divi-pro-gallery/demo/#masonry-gallery)
+Purchase: [Get Pro Version](https://diviextensions.com/divi-pro-gallery/)
 
-Most helpful links
-<ul>
- 	<li><a href="https://divitorque.com/?utm_campaign=wporg&utm_source=torquemasonrygallery&utm_medium=textlink" target="_blank" rel="">Divi Torque Plugin</a></li>
- 	<li><a href="https://divitorque.com/changelog/?utm_campaign=wporg&utm_source=torquemasonrygallery&utm_medium=textlink" target="_blank" rel="">Divi Torque Changelog</a></li>
- 	<li><a href="https://divitorque.com/docs/?utm_campaign=wporg&utm_source=torquemasonrygallery&utm_medium=textlink" target="_blank" rel="">Knowledge Base</a></li>
-</ul>
+== Key Features ==
 
-Elevate your website's visual appeal with the Torque Masonry Gallery Plugin. Specifically designed for Divi enthusiasts, this cascading grid-style gallery offers a captivating alternative to the standard Divi Masonry Gallery.
+Divi Masonry Gallery lets you create responsive masonry-style image galleries with powerful features:
 
-<a href="https://divitorque.com/divi-masonry-gallery/?utm_campaign=wporg&utm_source=torquemasonrygallery&utm_medium=textlink" target="_blank" rel="">Check the Demos</a>
-
-<strong>Masonry Gallery</strong>
-This unique gallery style maintains a consistent image width while allowing for varying heights, ensuring your photos stand out in a sea of uniformity.
-
-<strong>Features Include:</strong>
-
-* <strong>Easy Configuration</strong>: Streamlined settings make it a breeze to integrate and manage the gallery.
-* <strong>Create Image Galleries</strong>: Build stunning visual narratives with ease.
-* <strong>Custom Columns & Responsive Galleries</strong>: Adjust and tailor the number of columns to suit your design needs and ensure your gallery looks impeccable on any device.
-* <strong>Divi Compatibility</strong>: Seamlessly integrates with both Divi and Divi Visual Builder, ensuring a smooth user experience.
-* <strong>Customizable Display Options</strong>: Choose to show or hide image titles and captions, and further tweak the caption color and font size to align with your brand's aesthetics.
-
-Upgrade your website's visual game with the Torque Masonry Gallery Plugin. Ideal for Divi users looking for an innovative and beautiful way to showcase their images.
-
-<strong>SUPPORT THAT CARES! ⛑️</strong>
-
-We know you want a good product with strong support. We're here to answer your questions and help you use our plugin effectively.
-
-<a href="https://divitorque.com/support/?utm_campaign=wporg&utm_source=torquemasonrygallery&utm_medium=textlink" target="_blank" rel="">Need help? We are just a click away!</a>
-
-<strong>CONNECT WITH OUR TEAM AND COMMUNITY 🌐</strong>
-
-<ul>
-	<li><a href="https://www.facebook.com/groups/divitorque" target="_blank" rel="">https://www.facebook.com/groups/divitorque</a></li>
-	<li><a href="https://www.facebook.com/divitorque" target="_blank" rel="">https://www.facebook.com/divitorque</a></li>
-	<li><a href="https://twitter.com/divitorque" target="_blank" rel="">https://twitter.com/divitorque</a></li>
-</ul>
+- Customizable columns and spacing
+- Image categorization and filtering
+- Hover effects and animations
+- Lightbox display
+- Pagination options
+- Random image ordering
 
 == Installation ==
 
-> Note: This plugin works with Divi. Make sure you have [Divi Theme](https://www.elegantthemes.com/) installed.
-
-Install the Torque Masonry Gallery either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
-
-For more information, please visit our <a href="https://divitorque.com/docs/?utm_campaign=wporg&utm_source=torquemasonrygallery&utm_medium=textlink" target="_blank" rel="">Knowledge Base.</a>
-
-== Frequently Asked Questions ==
-
-== Screenshots ==
+1. Install and activate the Divi Theme
+2. Install plugin through WordPress plugins menu or upload files manually
+3. Activate the plugin
 
 == Changelog ==
 
+1.0.5
+* Fixed gallery refresh and reload handling issues
+
+1.0.4
+* Enhanced gallery functionality with new link action capabilities
+
 1.0.3
-* New: Link action features
-* Fix: Deprecated warning
+* Introduced additional link action options for gallery items
+* Resolved compatibility issues with deprecated WordPress functions
 
 1.0.2
-* Fix: Reload issues
+* Fixed gallery refresh and reload handling issues
 
 1.0.1
-* Fix: Module issues
+* Addressed core module functionality issues
 
 1.0.0
-* Initial release
-
-== Upgrade Notice ==
-
+* Initial public release of Divi Masonry Gallery

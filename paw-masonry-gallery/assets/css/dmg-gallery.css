@@ -1,0 +1,162 @@
+/* Gallery Container */
+.divi-masonry-gallery {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Gallery Items */
+.dmg-item {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.dmg-item .pic {
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: transform 0.3s ease;
+}
+
+.dmg-item:hover .pic {
+	transform: scale(1.05);
+}
+
+/* Fancybox Custom Styles */
+.dmg-gallery-fancybox.fancybox-container {
+	z-index: 999999;
+}
+
+.dmg-gallery-fancybox .fancybox-bg {
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.dmg-gallery-fancybox .fancybox-toolbar {
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+	padding: 4px;
+	opacity: 1;
+	visibility: visible;
+}
+
+.dmg-gallery-fancybox .fancybox-button {
+	background: transparent;
+	color: #fff;
+	padding: 10px;
+	width: 44px;
+	height: 44px;
+	opacity: 0.8;
+	transition: opacity 0.2s ease;
+}
+
+.dmg-gallery-fancybox .fancybox-button:hover {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.dmg-gallery-fancybox .fancybox-button svg {
+	width: 24px;
+	height: 24px;
+}
+
+.dmg-gallery-fancybox .fancybox-navigation .fancybox-button {
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+}
+
+.dmg-gallery-fancybox .fancybox-navigation .fancybox-button:hover {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.dmg-gallery-fancybox .fancybox-caption {
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.85) 0%,
+		rgba(0, 0, 0, 0.3) 50%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	padding: 20px;
+}
+
+.dmg-gallery-fancybox .fancybox-caption__body {
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+/* Thumbnails */
+.dmg-gallery-fancybox .fancybox-thumbs {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.dmg-gallery-fancybox .fancybox-thumbs__list a {
+	border: 2px solid transparent;
+	transition: all 0.2s ease;
+}
+
+.dmg-gallery-fancybox .fancybox-thumbs__list a:hover {
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
+.dmg-gallery-fancybox .fancybox-thumbs__list a.fancybox-thumbs-active {
+	border-color: #fff;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+	.dmg-gallery-fancybox .fancybox-navigation .fancybox-button {
+		padding: 6px;
+		width: 36px;
+		height: 36px;
+	}
+
+	.dmg-gallery-fancybox .fancybox-toolbar {
+		padding: 2px;
+	}
+
+	.dmg-gallery-fancybox .fancybox-button {
+		padding: 8px;
+		width: 36px;
+		height: 36px;
+	}
+
+	.dmg-gallery-fancybox .fancybox-button svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.dmg-gallery-fancybox .fancybox-caption {
+		padding: 12px;
+	}
+
+	.dmg-gallery-fancybox .fancybox-caption__body {
+		font-size: 14px;
+	}
+}
+
+/* Loading Animation */
+.dmg-gallery-fancybox .fancybox-loading {
+	border-width: 3px;
+	width: 40px;
+	height: 40px;
+}
+
+/* Prevent body scroll when lightbox is open */
+body.compensate-for-scrollbar {
+	margin-right: 0 !important;
+}
+
+/* Fix for Divi theme compatibility */
+.et-db #et-boc .et-l .divi-masonry-gallery {
+	width: 100% !important;
+	max-width: none !important;
+}
+
+/* Improve touch area for mobile */
+@media (hover: none) and (pointer: coarse) {
+	.dmg-gallery-fancybox .fancybox-button {
+		min-width: 44px;
+		min-height: 44px;
+	}
+}

@@ -1,142 +1,135 @@
 <?php
 
 /**
- * Plugin Name: Torque Masonry Gallery
- * Plugin URI: https://divitorque.com/
- * Author: Divi Torque
- * Author URI: https://divitorque.com/
+ * Plugin Name: Divi Masonry Gallery
+ * Plugin URI: https://diviextensions.com/divi-pro-gallery/
+ * Author: DiviExtensions
+ * Author URI: https://diviextensions.com/
  * Description: The fastest and easiest way to create a responsive masonry gallery.
- * Version: 1.0.3
- * Text Domain: paw-masonry-gallery
+ * Version: 1.0.5
+ * Text Domain: divi-masonry-gallery
  * License: GPL2
  */
 
 // Exit if accessed directly
-if (!defined('ABSPATH')) exit;
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+define('DMG_VERSION',         '1.0.5');
+define('DMG_BASENAME',        plugin_basename(__FILE__));
+define('DMG_PLUGIN_DIR',      plugin_dir_path(__FILE__));
+define('DMG_PLUGIN_DIR_URL',  plugin_dir_url(__FILE__));
 
 /**
  * Main plugin class
  */
-class TorqueMasonryGallery
+class Divi_Masonry_Gallery
 {
+    const DOCS_LINK     = 'https://diviextensions.com/docs/';
+    const PRICING_LINK  = 'https://diviextensions.com/divi-pro-gallery/';
 
     private static $instance;
 
-    public $assets;
-
     public static function instance()
     {
-
-        if (!isset(self::$instance) && !(self::$instance instanceof TorqueMasonryGallery)) {
-            self::$instance = new TorqueMasonryGallery;
+        if (!isset(self::$instance) && !(self::$instance instanceof Divi_Masonry_Gallery)) {
+            self::$instance = new Divi_Masonry_Gallery;
             self::$instance->includes();
         }
-
         return self::$instance;
     }
 
     public function __construct()
     {
-        define('PMG_VERSION',            '1.0.3');
-        define('PMG_BASENAME',         plugin_basename(__FILE__));
-        define('PMG_PLUGIN_DIR',        plugin_dir_path(__FILE__));
-        define('PMG_PLUGIN_DIR_URL',  plugin_dir_url(__FILE__));
-
-        $this->assets = json_decode(file_get_contents(PMG_PLUGIN_DIR . 'assets/mix-manifest.json'), true);
-
-        add_action('divi_extensions_init', [$this, 'pmg_init']);
+        add_action('et_builder_ready', [$this, 'load_modules'], 11);
         add_action('wp_enqueue_scripts', [$this, 'register_frontend_scripts']);
-        add_action('wp_enqueue_scripts', [$this, 'register_builder_scripts'], 99);
-        add_filter('plugin_action_links_' . PMG_BASENAME, array($this, 'add_plugin_action_links'));
+        add_action('wp_enqueue_scripts', [$this, 'register_builder_scripts'], 11);
     }
 
     private function includes()
     {
-        require PMG_PLUGIN_DIR . '/includes/helper.php';
+        require DMG_PLUGIN_DIR . '/includes/helper.php';
+    }
+
+    public function load_modules()
+    {
+        if (!class_exists('ET_Builder_Module')) {
+            return;
+        }
+
+        require_once DMG_PLUGIN_DIR . 'includes/modules/Divi4/Gallery/Gallery.php';
     }
 
     public function register_frontend_scripts()
     {
         wp_register_script(
-            'pmg-fancybox',
-            PMG_PLUGIN_DIR_URL . 'assets/js/fancybox.min.js',
+            'dmg-fancybox',
+            DMG_PLUGIN_DIR_URL . 'assets/libs/fancybox/fancybox.js',
             ['jquery'],
-            PMG_VERSION,
-            true
-        );
-
-        wp_register_script(
-            'pmg-masonry',
-            PMG_PLUGIN_DIR_URL . 'assets/js/masonry.min.js',
-            ['jquery'],
-            PMG_VERSION,
-            true
-        );
-
-        wp_register_script(
-            'pmg-frontend',
-            PMG_PLUGIN_DIR_URL . 'assets' . $this->assets['/js/frontend.js'],
-            ['jquery', 'pmg-masonry', 'pmg-fancybox'],
-            PMG_VERSION,
+            DMG_VERSION,
             true
         );
 
         wp_register_style(
-            'pmg-fancybox',
-            PMG_PLUGIN_DIR_URL . 'assets' . '/css/fancybox.min.css',
+            'dmg-fancybox',
+            DMG_PLUGIN_DIR_URL . 'assets/libs/fancybox/fancybox.css',
             [],
-            PMG_VERSION,
-            false
+            DMG_VERSION,
+        );
+
+        wp_register_script(
+            'dmg-masonry',
+            DMG_PLUGIN_DIR_URL . 'assets/libs/masonry/masonry.min.js',
+            ['jquery'],
+            DMG_VERSION,
+            true
+        );
+
+        wp_register_script(
+            'dmg-frontend',
+            DMG_PLUGIN_DIR_URL . 'dist/js/frontend.js',
+            ['jquery', 'dmg-masonry', 'dmg-fancybox'],
+            DMG_VERSION,
+            true
         );
 
         wp_register_style(
-            'pmg-frontend',
-            PMG_PLUGIN_DIR_URL . 'assets' . $this->assets['/css/frontend.css'],
-            ['pmg-fancybox'],
-            PMG_VERSION,
+            'dmg-frontend',
+            DMG_PLUGIN_DIR_URL . 'dist/css/frontend.css',
+            ['dmg-fancybox'],
+            DMG_VERSION,
             false
         );
     }
 
     public function register_builder_scripts()
     {
-
-        if (!et_core_is_fb_enabled()) {
+        // Check if we're in the Divi Builder frontend editor
+        if (!function_exists('et_fb_is_enabled') || !et_fb_is_enabled()) {
             return;
         }
 
         wp_enqueue_script(
-            'pmg-bundle',
-            PMG_PLUGIN_DIR_URL . 'assets' . $this->assets['/js/bundle.js'],
-            ['react-dom', 'react', 'pmg-frontend'],
-            PMG_VERSION,
+            'dmg-bundle',
+            DMG_PLUGIN_DIR_URL . 'dist/js/bundle.js',
+            ['jquery', 'react', 'react-dom', 'dmg-frontend'],
+            DMG_VERSION . time(),
             true
         );
 
         wp_enqueue_style(
-            'pmg-bundle',
-            PMG_PLUGIN_DIR_URL . 'assets' . $this->assets['/css/bundle.css'],
+            'dmg-bundle',
+            DMG_PLUGIN_DIR_URL . 'dist/css/bundle.css',
             [],
-            PMG_VERSION
+            DMG_VERSION . time()
         );
     }
-
-
-    public function pmg_init()
-    {
-        require_once PMG_PLUGIN_DIR . 'includes/extension.php';
-    }
-
-    public function add_plugin_action_links($links)
-    {
-        $links[] = '<a href="https://divitorque.com/pricing/" target="_blank" style="color: #FF6900;">' . __('Upgrade', 'paw-masonry-gallery') . '</a>';
-        return $links;
-    }
 }
 
-function torque_masonry_gallery()
+function diviextensions_masonry_gallery()
 {
-    return TorqueMasonryGallery::instance();
+    return Divi_Masonry_Gallery::instance();
 }
 
-torque_masonry_gallery();
+diviextensions_masonry_gallery();

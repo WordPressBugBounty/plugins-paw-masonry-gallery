@@ -1,6 +1,6 @@
 <?php
 
-namespace TorqueMasonryGallery;
+namespace Divi_Masonry_Gallery;
 
 class Helper
 {
@@ -83,5 +83,3 @@ class Helper
         return $option;
     }
 }
-
-Helper::render_attributes(['class' => 'asdfasdf']);

@@ -1,0 +1,172 @@
+# Copyright (C) 2025 Divi Masonry Gallery
+# This file is distributed under the same license as the Divi Masonry Gallery package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Divi Masonry Gallery\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: PlugPress <support@plugpress.io>\n"
+"POT-Creation-Date: 2025-03-22 20:53+0000\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/modules/Divi4/Gallery/Gallery.php:21
+msgid "Masonry Gallery"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:30
+msgid "General"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:31
+msgid "Captions"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:32, includes/modules/Divi4/Gallery/Gallery.php:203
+msgid "Lightbox"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:37
+msgid "Overlay"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:38, includes/modules/Divi4/Gallery/Gallery.php:64
+msgid "Items"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:39, includes/modules/Divi4/Gallery/Gallery.php:74, includes/modules/Divi4/Gallery/Gallery.php:345
+msgid "Image"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:40
+msgid "Caption"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:42
+msgid "Caption Text"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:46, includes/modules/Divi4/Gallery/Gallery.php:313
+msgid "Title"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:49, includes/modules/Divi4/Gallery/Gallery.php:329
+msgid "Description"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:59
+msgid "Gallery"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:69
+msgid "Item"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:85
+msgid "Choose Images"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:86
+msgid "Choose the images that you would like to appear in the image gallery."
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:96
+msgid "Image Size"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:98
+msgid " Select the size of your images."
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:110
+msgid "Gallery Layout"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:115
+msgid "Gallery Type"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:119
+msgid "Masonry"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:120
+msgid "Grid"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:121
+msgid "Highlight"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:122
+msgid "Slider"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:131
+msgid "Columns"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:152
+msgid "Spacing"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:169
+msgid "Overlay Color"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:179
+msgid "Opacity"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:196
+msgid "Lightbox & Links"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:200
+msgid "No Link"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:201
+msgid "Media File"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:202
+msgid "Attachment Page"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:216
+msgid "Hide Caption"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:219, includes/modules/Divi4/Gallery/Gallery.php:233, includes/modules/Divi4/Gallery/Gallery.php:250
+msgid "yes"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:220, includes/modules/Divi4/Gallery/Gallery.php:234, includes/modules/Divi4/Gallery/Gallery.php:251
+msgid "no"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:230
+msgid "Hide Title"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:247
+msgid "Hide Description"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:390, includes/modules/Divi4/Gallery/Gallery.php:403
+msgid "Gallery not found."
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:454, includes/modules/Divi4/Gallery/Gallery.php:455
+msgid "Open image"
+msgstr ""
+
+#: includes/modules/Divi4/Gallery/Gallery.php:634
+msgid "Full"
+msgstr ""
